@@ -23,3 +23,4 @@ utilidadNeta = utilidadBruta - impuestoRenta
 print(f"El valor de la utilidad operativa fue: ${utilidadOperativa}")
 print(f"El valor del el impuesto a la renta fue: ${impuestoRenta}")
 print(f"El valor de la utilidad neta fue: ${utilidadNeta}")
+print("Prueba")
