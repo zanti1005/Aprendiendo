@@ -24,13 +24,34 @@ precioArepas = 5000
 
 if cantidadDeHuevos > 10:
     precioHuevos = 1000
+    precioArepas = 5000
 
 if cantidadArepas > 10 and cantidadDeHuevos > 10:
     precioHuevos = 800
     precioArepas = 2000
 
-totalCompra = precioHuevos*cantidadDeHuevos + precioArepas*cantidadArepas
-print(f"El total de su comPra es ${totalCompra} pesos")
+subTotal = precioHuevos*cantidadDeHuevos + precioArepas*cantidadArepas 
+print(f"El total de su compra es ${subTotal} pesos")
+
+#if subTotal > 50000 and (cantidadDeHuevos == 0 or cantidadArepas == 0):
+#    descuento = subTotal * 10 / 100
+#    totalFinal = subTotal - descuento
+ #   print(f"El descuento de la compra es de ${descuento} ")
+  #  print(f"El total final de la compra es de ${totalFinal}")
+#elif subTotal > 50000 and (cantidadDeHuevos > 0 and cantidadArepas > 0):
+ #   descuento = subTotal * 15 / 100
+  #  totalFinal = subTotal - descuento
+   # print(f"El descuento de la compra es de ${descuento} ")
+    #print(f"El total final de la compra es de ${totalFinal}")
+
+descuento = 0
+if subTotal > 50000:
+    if cantidadDeHuevos == 0 or cantidadArepas == 0:
+        descuento = subTotal * 10 / 100
+    else:
+        descuento = subTotal * 15 / 100
+
+total = subTotal  - descuento
 
 # Condiciones adicionales que se deben cumplir
 # 1. si total de la compra es mayor a 50000 dar un descuento adicional del 10%
