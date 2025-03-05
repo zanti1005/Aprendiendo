@@ -8,4 +8,4 @@ while numeroIngresadoPorElUsuario != numeroAEncontrar:
     elif   numeroIngresadoPorElUsuario < numeroAEncontrar:
         print("EL numero que estas buscando es mayor al que encontraste")
 
-print("¡Correcto! El número que ingesaste es el correcto")
+print("¡Correcto! El número que ingesaste es el correcto")   
