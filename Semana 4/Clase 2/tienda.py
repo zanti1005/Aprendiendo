@@ -18,24 +18,8 @@ class Tienda():
             print("Inventario: ",producto.inventario)
             print("__________")
 
-
-
-#3:
-nombreTienda = input("Ingrese el nombre de la tienda a crear: ")
-paginaWeb = input("Ingrese la página web de la tienda: ")
-direccion = input("Ingrese la dirección  de la tienda: ")
-tienda = Tienda(nombreTienda,paginaWeb,direccion)
-
-
-#7:
-while True:
-    operacion = input("ingrese NP para crear un nuevo producto, I para imprimir los productos e inventarios : ")
-    if operacion == "NP":
-        #6:
-        nombre = input("Ingrese el nombre del producto: ")
-        precio = int(input("Ingrese el precio del producto: "))
-        productoCreado = Producto(nombre,precio)
-        tienda.agregarProducto(productoCreado)
-        print(tienda.listaDeProductos)
-    elif operacion == "I":
-        tienda.imprimirProductosEinventarios() 
+    def buscarProductoPorNombre(self, nombreProductoABuscar):
+        for producto in self.listaDeProductos:
+            if producto.nombre == nombreProductoABuscar:
+                return producto
+            return False

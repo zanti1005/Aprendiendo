@@ -23,3 +23,13 @@ y la cantidad de elementos que se quiere comprar
     si hay inventario, calcular el total de la venta (cantidad*precio) y mostrar "venta exitosa".
         depues, restar la cantidad vendida del inventario.
     si no hya inventario suficiente mostrar un mennsaje que diga " no hay unidades suficientes".
+#10. crear nuevo archivo py y llamarlo main.py
+    #este contendra la logica de la app y hara uso de tienda y producto
+    #main.py:
+        imports
+        creacion tienda
+        while true
+    #producto.py
+        class Product:
+    #tienda.py
+        class Tienda:
