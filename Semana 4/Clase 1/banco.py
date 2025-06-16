@@ -1,5 +1,5 @@
 import random
-from .persona import Persona
+from persona import Persona
 
 #ejercicio opcional: crear una lista de cuenbta y agregar la posibilidad 
 # de crear una cuenta nueva o eliminar una cuenta
@@ -41,7 +41,14 @@ def buscarCuentas(mensajeOperacion, listaDeCuentas):
             return [True,cuentaIteracion]
     return [False]
 
+def buscarPersona(cedula,listaDePersonas):
+    for persona in listaDeCuentas:
+        if persona.documento == cedula:
+            return persona
+    return False
+
 listaDeCuentas = []
+listaDePersonas = []
 
 while True:
     operacion = input("Ingrese N para crear una nueva cuenta, S para consultar el saldo, R para retirar y C para consignar: ")
@@ -50,15 +57,22 @@ while True:
         
         #por hacer:
         #1. pedirle la cedula al usuario
+        cedula = input("Por favor ingrese su cédula")
         #2. buscar el usuario. si existe, asociar la cuenta a este usuario
+        personaEncontrada = buscarPersona(cedula,listaDePersonas)
         #3. si no exist, preguntar si info pesonal de la persona, crear la persona y asociar la nueva cuenta a la nueva persona
+        if not personaEncontrada:
+            #crear una nueva persona
+            nuevaPersona = Persona("Daniel",48,23434,"hshs@c.com","jsdjsdj","Colombiano","ingeniero","54232232")
+            listaDePersonas.append(nuevaPersona)
+            # crear una nueva cuenta bancaria y asociarla a la persona recientemente creada
+            nuevaCuenta =CuentaBancaria(saldoInicial, nuevaPersona)
+            listaDeCuentas.append(nuevaCuenta)
+        else:
+            # crear una nueva cuenta bancaria y asociarla a la persona recientemente creada
+            nuevaCuenta =CuentaBancaria(saldoInicial, personaEncontrada)
+            listaDeCuentas.append(nuevaCuenta)
         
-        #crear una nueva persona
-        #nuevaPersona = Persona
-        
-        
-        nuevaCuenta =CuentaBancaria(saldoInicial)
-        listaDeCuentas.append(nuevaCuenta)
         print("Cuenta creada con éxito. El número de la cuenta es ", nuevaCuenta.numeroCuenta)
     elif operacion == "S":
         resultadoBusqueda = buscarCuentas("Por favor ingrese la cuenta que quiere consultar ", listaDeCuentas)

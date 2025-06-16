@@ -35,4 +35,7 @@ y la cantidad de elementos que se quiere comprar
         class Tienda:
 #11. Crear un acumulado de ventas totales que se muestre luego de ejecutar cada venta.
     Tambien crear nueva operacion para revisar el total de las ventas
+#12. crear acumulado de ventas por vendedor y luego infomar cuanto falta para el objetivo
+#13. crear acumulado compra para cliente 
+    si el cliente pasa un rango definido se le da un descuento
     
