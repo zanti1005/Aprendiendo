@@ -7,16 +7,5 @@ class Persona():
         self.correo = correo
         self.documento = documento
 
-class Vendedor(Persona):
-    def __init__(self, nombre, edad, telefono, correo, documento, objetivoVentas, IDempresarial):
-        super().__init__(nombre, edad, telefono, correo, documento)
-        self.objetivoVentas = objetivoVentas
-        self.IDempresarial = IDempresarial
-        self.acumulado = 0
 
-class Cliente(Persona):
-    def __init__(self, nombre, edad, telefono, correo, documento, direccionEnvio, correoFacturacion):
-        super().__init__(nombre, edad, telefono, correo, documento)
-        self.acumuladoFacturacion = 0
-        self.direccionEnvio = direccionEnvio
-        self.correoFacturacion = correoFacturacion
+
